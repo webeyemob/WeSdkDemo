@@ -13,8 +13,6 @@
 		D418955822D57B80005A046F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D418955722D57B80005A046F /* Assets.xcassets */; };
 		D418955B22D57B80005A046F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D418955922D57B80005A046F /* LaunchScreen.storyboard */; };
 		D418955E22D57B80005A046F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D418955D22D57B80005A046F /* main.m */; };
-		D418956722D58D38005A046F /* WeMobSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D418956522D58D38005A046F /* WeMobSDK.bundle */; };
-		D418956822D58D38005A046F /* WeMobSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D418956622D58D38005A046F /* WeMobSdk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +26,6 @@
 		D418955A22D57B80005A046F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D418955C22D57B80005A046F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D418955D22D57B80005A046F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D418956522D58D38005A046F /* WeMobSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeMobSDK.bundle; sourceTree = "<group>"; };
-		D418956622D58D38005A046F /* WeMobSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WeMobSdk.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +33,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D418956822D58D38005A046F /* WeMobSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,18 +67,8 @@
 				D418955922D57B80005A046F /* LaunchScreen.storyboard */,
 				D418955C22D57B80005A046F /* Info.plist */,
 				D418955D22D57B80005A046F /* main.m */,
-				D418956422D58D38005A046F /* framework */,
 			);
 			path = wesdk_ios_demo;
-			sourceTree = "<group>";
-		};
-		D418956422D58D38005A046F /* framework */ = {
-			isa = PBXGroup;
-			children = (
-				D418956522D58D38005A046F /* WeMobSDK.bundle */,
-				D418956622D58D38005A046F /* WeMobSdk.framework */,
-			);
-			path = framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +131,6 @@
 				D418955B22D57B80005A046F /* LaunchScreen.storyboard in Resources */,
 				D418955822D57B80005A046F /* Assets.xcassets in Resources */,
 				D418955622D57B7E005A046F /* Main.storyboard in Resources */,
-				D418956722D58D38005A046F /* WeMobSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
