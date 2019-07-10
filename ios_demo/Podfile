@@ -1,0 +1,13 @@
+project 'wesdk_ios_demo.xcodeproj'
+
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+inhibit_all_warnings!
+
+target 'wesdk_ios_demo' do
+
+    use_frameworks!
+    
+    pod 'WeMobSdk'
+end
