@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.wesdk.demo"
+
+        // minSdkVersion >= 15 if you mediation Fyber
+        // minSdkVersion >= 16 if you mediation MoPub
+        minSdkVersion 16
+
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+
+
+        multiDexEnabled true
+    }
+
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    // MultiDex
+    implementation 'com.android.support:multidex:1.0.3'
+
+    // Access Sdk（must）
+    implementation 'com.we.sdk:access:1.6.5'
+}
