@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22189C6F233882BA00703E68 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C6E233882BA00703E68 /* Security.framework */; };
+		22189C712338830000703E68 /* WeMobSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C702338830000703E68 /* WeMobSdk.framework */; };
+		22189C73233885E500703E68 /* WeMobMediation_TikTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C72233885E500703E68 /* WeMobMediation_TikTok.framework */; };
+		22189C752338860B00703E68 /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C742338860B00703E68 /* BUAdSDK.framework */; };
+		22189C772338863500703E68 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C762338863400703E68 /* StoreKit.framework */; };
+		22189C792338865200703E68 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C782338865200703E68 /* libresolv.9.tbd */; };
+		22189C7B2338865B00703E68 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C7A2338865B00703E68 /* libc++.tbd */; };
+		22189C7D2338866300703E68 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C7C2338866300703E68 /* libz.tbd */; };
+		22189C7F2338867400703E68 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C7E2338867300703E68 /* MobileCoreServices.framework */; };
+		22189C812338867E00703E68 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C802338867E00703E68 /* WebKit.framework */; };
+		22189C832338868700703E68 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C822338868700703E68 /* MediaPlayer.framework */; };
+		22189C852338869000703E68 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C842338869000703E68 /* CoreMedia.framework */; };
+		22189C872338869B00703E68 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C862338869B00703E68 /* AVFoundation.framework */; };
+		22189C89233886A500703E68 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C88233886A500703E68 /* CoreTelephony.framework */; };
+		22189C8B233886B100703E68 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C8A233886B100703E68 /* SystemConfiguration.framework */; };
+		22189C8D233886BD00703E68 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C8C233886BD00703E68 /* AdSupport.framework */; };
+		22189C8F233886C600703E68 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22189C8E233886C600703E68 /* CoreMotion.framework */; };
+		22189C93233887BD00703E68 /* FeedAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22189C90233887BC00703E68 /* FeedAdView.m */; };
+		22189C94233887BD00703E68 /* FeedAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22189C92233887BD00703E68 /* FeedAdView.xib */; };
 		D418955022D57B7E005A046F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D418954F22D57B7E005A046F /* AppDelegate.m */; };
 		D418955322D57B7E005A046F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D418955222D57B7E005A046F /* ViewController.m */; };
 		D418955622D57B7E005A046F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D418955422D57B7E005A046F /* Main.storyboard */; };
@@ -16,6 +35,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		119421A2EAE2B9910A36588E /* Pods-wesdk_ios_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wesdk_ios_demo.release.xcconfig"; path = "Target Support Files/Pods-wesdk_ios_demo/Pods-wesdk_ios_demo.release.xcconfig"; sourceTree = "<group>"; };
+		22189C6E233882BA00703E68 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		22189C702338830000703E68 /* WeMobSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeMobSdk.framework; path = Pods/WeSdk/WeSdk/1.3.1/WeMobSdk.framework; sourceTree = "<group>"; };
+		22189C72233885E500703E68 /* WeMobMediation_TikTok.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WeMobMediation_TikTok.framework; path = Pods/WeSdkMediation_TikTok/WeSdkMediation_TikTok/2.3.1.0.2/WeMobMediation_TikTok.framework; sourceTree = "<group>"; };
+		22189C742338860B00703E68 /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BUAdSDK.framework; path = "Pods/Bytedance-UnionAD/Bytedance-UnionAd/Frameworks/BUAdSDK.framework"; sourceTree = "<group>"; };
+		22189C762338863400703E68 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		22189C782338865200703E68 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		22189C7A2338865B00703E68 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		22189C7C2338866300703E68 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		22189C7E2338867300703E68 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		22189C802338867E00703E68 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		22189C822338868700703E68 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		22189C842338869000703E68 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		22189C862338869B00703E68 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		22189C88233886A500703E68 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		22189C8A233886B100703E68 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		22189C8C233886BD00703E68 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		22189C8E233886C600703E68 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		22189C90233887BC00703E68 /* FeedAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedAdView.m; sourceTree = "<group>"; };
+		22189C91233887BC00703E68 /* FeedAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedAdView.h; sourceTree = "<group>"; };
+		22189C92233887BD00703E68 /* FeedAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedAdView.xib; sourceTree = "<group>"; };
+		30FB3FEFF845F91BE58D8CF9 /* Pods_wesdk_ios_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wesdk_ios_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7727AB0B935BACA669F9E746 /* Pods-wesdk_ios_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wesdk_ios_demo.debug.xcconfig"; path = "Target Support Files/Pods-wesdk_ios_demo/Pods-wesdk_ios_demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D418954B22D57B7E005A046F /* wesdk_ios_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wesdk_ios_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D418954E22D57B7E005A046F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D418954F22D57B7E005A046F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +75,70 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22189C8F233886C600703E68 /* CoreMotion.framework in Frameworks */,
+				22189C8D233886BD00703E68 /* AdSupport.framework in Frameworks */,
+				22189C8B233886B100703E68 /* SystemConfiguration.framework in Frameworks */,
+				22189C89233886A500703E68 /* CoreTelephony.framework in Frameworks */,
+				22189C872338869B00703E68 /* AVFoundation.framework in Frameworks */,
+				22189C852338869000703E68 /* CoreMedia.framework in Frameworks */,
+				22189C832338868700703E68 /* MediaPlayer.framework in Frameworks */,
+				22189C812338867E00703E68 /* WebKit.framework in Frameworks */,
+				22189C7F2338867400703E68 /* MobileCoreServices.framework in Frameworks */,
+				22189C7D2338866300703E68 /* libz.tbd in Frameworks */,
+				22189C7B2338865B00703E68 /* libc++.tbd in Frameworks */,
+				22189C792338865200703E68 /* libresolv.9.tbd in Frameworks */,
+				22189C772338863500703E68 /* StoreKit.framework in Frameworks */,
+				22189C752338860B00703E68 /* BUAdSDK.framework in Frameworks */,
+				22189C73233885E500703E68 /* WeMobMediation_TikTok.framework in Frameworks */,
+				22189C712338830000703E68 /* WeMobSdk.framework in Frameworks */,
+				22189C6F233882BA00703E68 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7590B3654D96BF6CB2DA710B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7727AB0B935BACA669F9E746 /* Pods-wesdk_ios_demo.debug.xcconfig */,
+				119421A2EAE2B9910A36588E /* Pods-wesdk_ios_demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A3E13904C9E66F9A4E20DBC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22189C8E233886C600703E68 /* CoreMotion.framework */,
+				22189C8C233886BD00703E68 /* AdSupport.framework */,
+				22189C8A233886B100703E68 /* SystemConfiguration.framework */,
+				22189C88233886A500703E68 /* CoreTelephony.framework */,
+				22189C862338869B00703E68 /* AVFoundation.framework */,
+				22189C842338869000703E68 /* CoreMedia.framework */,
+				22189C822338868700703E68 /* MediaPlayer.framework */,
+				22189C802338867E00703E68 /* WebKit.framework */,
+				22189C7E2338867300703E68 /* MobileCoreServices.framework */,
+				22189C7C2338866300703E68 /* libz.tbd */,
+				22189C7A2338865B00703E68 /* libc++.tbd */,
+				22189C782338865200703E68 /* libresolv.9.tbd */,
+				22189C762338863400703E68 /* StoreKit.framework */,
+				22189C742338860B00703E68 /* BUAdSDK.framework */,
+				22189C72233885E500703E68 /* WeMobMediation_TikTok.framework */,
+				22189C702338830000703E68 /* WeMobSdk.framework */,
+				22189C6E233882BA00703E68 /* Security.framework */,
+				30FB3FEFF845F91BE58D8CF9 /* Pods_wesdk_ios_demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D418954222D57B7E005A046F = {
 			isa = PBXGroup;
 			children = (
 				D418954D22D57B7E005A046F /* wesdk_ios_demo */,
 				D418954C22D57B7E005A046F /* Products */,
+				7590B3654D96BF6CB2DA710B /* Pods */,
+				A3E13904C9E66F9A4E20DBC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +153,9 @@
 		D418954D22D57B7E005A046F /* wesdk_ios_demo */ = {
 			isa = PBXGroup;
 			children = (
+				22189C91233887BC00703E68 /* FeedAdView.h */,
+				22189C90233887BC00703E68 /* FeedAdView.m */,
+				22189C92233887BD00703E68 /* FeedAdView.xib */,
 				D418954E22D57B7E005A046F /* AppDelegate.h */,
 				D418954F22D57B7E005A046F /* AppDelegate.m */,
 				D418955122D57B7E005A046F /* ViewController.h */,
@@ -78,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D418956122D57B80005A046F /* Build configuration list for PBXNativeTarget "wesdk_ios_demo" */;
 			buildPhases = (
+				D8AA463871009470F8EE3D94 /* [CP] Check Pods Manifest.lock */,
 				D418954722D57B7E005A046F /* Sources */,
 				D418954822D57B7E005A046F /* Frameworks */,
 				D418954922D57B7E005A046F /* Resources */,
+				C414DA300A527870C50E8198 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,10 +231,43 @@
 				D418955B22D57B80005A046F /* LaunchScreen.storyboard in Resources */,
 				D418955822D57B80005A046F /* Assets.xcassets in Resources */,
 				D418955622D57B7E005A046F /* Main.storyboard in Resources */,
+				22189C94233887BD00703E68 /* FeedAdView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C414DA300A527870C50E8198 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP] Copy Pods Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-wesdk_ios_demo/Pods-wesdk_ios_demo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8AA463871009470F8EE3D94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wesdk_ios_demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D418954722D57B7E005A046F /* Sources */ = {
@@ -144,6 +277,7 @@
 				D418955322D57B7E005A046F /* ViewController.m in Sources */,
 				D418955E22D57B80005A046F /* main.m in Sources */,
 				D418955022D57B7E005A046F /* AppDelegate.m in Sources */,
+				22189C93233887BD00703E68 /* FeedAdView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -273,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,12 +417,17 @@
 		};
 		D418956222D57B80005A046F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7727AB0B935BACA669F9E746 /* Pods-wesdk_ios_demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4EE26T2DW6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/wesdk_ios_demo/framework",
+					"$(PROJECT_DIR)/Pods/WeSdk/WeSdk/1.3.1",
+					"$(PROJECT_DIR)/Pods/WeSdkMediation_TikTok/WeSdkMediation_TikTok/2.3.1.0.2",
+					"$(PROJECT_DIR)/Pods/Bytedance-UnionAD/Bytedance-UnionAd/Frameworks",
 				);
 				INFOPLIST_FILE = wesdk_ios_demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -296,7 +435,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.we.wesdk-ios-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.we.sdk.core;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,12 +443,17 @@
 		};
 		D418956322D57B80005A046F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 119421A2EAE2B9910A36588E /* Pods-wesdk_ios_demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4EE26T2DW6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/wesdk_ios_demo/framework",
+					"$(PROJECT_DIR)/Pods/WeSdk/WeSdk/1.3.1",
+					"$(PROJECT_DIR)/Pods/WeSdkMediation_TikTok/WeSdkMediation_TikTok/2.3.1.0.2",
+					"$(PROJECT_DIR)/Pods/Bytedance-UnionAD/Bytedance-UnionAd/Frameworks",
 				);
 				INFOPLIST_FILE = wesdk_ios_demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,7 +461,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.we.wesdk-ios-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.we.sdk.core;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

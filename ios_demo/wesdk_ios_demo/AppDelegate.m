@@ -17,9 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [WeMob initWithAppId:@"1e68d89e-ee81-47bc-ab4b-f79c09e5c561"];
+    [WeMob initWithAppId:@"0f483e96-1ca5-4c46-aff0-109b97563d72"];
     [WeMob setGdprConsent:true];
     [WeMob setTestMode:YES];
+    [WeMob setLogEnable:YES];
     return YES;
 }
 

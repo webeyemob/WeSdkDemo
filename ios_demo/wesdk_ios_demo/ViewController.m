@@ -7,22 +7,23 @@
 //
 
 #import "ViewController.h"
+#import "FeedAdView.h"
 @import WeMobSdk;
 
 
-@interface ViewController ()<WeMobBannerViewDelegate, WeMobInterstitialAdDelegate, WeMobNativeAdDelegate, WeMobRewardedVideoAdDelegate>
-
+@interface ViewController ()<WeMobBannerViewDelegate, WeMobInterstitialAdDelegate, WeMobNativeAdDelegate, WeMobRewardedVideoAdDelegate, WeMobFeedListDelegate>
 
 @property (nonatomic, strong) WeMobNativeAd *nativeAd;
 @property (nonatomic, strong) UIView *nativeAdView;
 
 @property (nonatomic, strong) WeMobInterstitialAd *interstitalAd;
 @property (nonatomic, strong) WeMobRewardedVideoAd *rewardAd;
+@property (nonatomic, strong) WeMobFeedList *feedList;
 
 @property (nonatomic, strong) UIButton *showIntBtn;
 @property (nonatomic, strong) UIButton *showNativeBtn;
-
 @property (nonatomic, strong) UIButton *showRewardBtn;
+    @property (nonatomic, strong) UIButton *showFeedListBtn;
 
 @property (nonatomic, strong) UIView *banner;
 
@@ -99,6 +100,26 @@
     
     rewardShowBtn.enabled = NO;
     self.showRewardBtn = rewardShowBtn;
+    
+    UIButton *loadFeedListBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    loadFeedListBtn.frame = CGRectMake(20, loadRewardBtn.frame.origin.y + 50, 150, 30);
+    [self.view addSubview:loadFeedListBtn];
+    [loadFeedListBtn setTitle:@"load FeedList" forState:UIControlStateNormal];
+    //[loadRewardBtn setBackgroundColor:[UIColor blueColor]];
+    [loadFeedListBtn setTitleColor:[UIColor colorWithRed:28.0/255.0 green:147.0/255.0 blue:243.0/255.0 alpha:1.0]  forState:UIControlStateNormal];
+    [loadFeedListBtn addTarget:self action:@selector(loadFeedList) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *feedListShowBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    feedListShowBtn.frame = CGRectMake(left, loadFeedListBtn.frame.origin.y, 150, 30);
+    [self.view addSubview:feedListShowBtn];
+    [feedListShowBtn setTitle:@"show FeedList" forState:UIControlStateNormal];
+    //[rewardShowBtn setBackgroundColor:[UIColor blueColor]];
+    [feedListShowBtn setTitleColor:[UIColor colorWithRed:28.0/255.0 green:147.0/255.0 blue:243.0/255.0 alpha:1.0]  forState:UIControlStateNormal];
+    [feedListShowBtn setTitleColor:[UIColor lightGrayColor]  forState:UIControlStateDisabled];
+    [feedListShowBtn addTarget:self action:@selector(showFeedList) forControlEvents:UIControlEventTouchUpInside];
+    
+    feedListShowBtn.enabled = NO;
+    self.showFeedListBtn = feedListShowBtn;
 }
 
 
@@ -110,7 +131,7 @@
     self.banner = banner;
     banner.hidden = YES;
     
-    WeMobBannerView *bannerView = [[WeMobBannerView alloc] initWithAdUnitId:@"57be18f5-7030-4a46-8fc9-49b4abbd2438" rootViewController:self];
+    WeMobBannerView *bannerView = [[WeMobBannerView alloc] initWithAdUnitId:@"19883768-3c51-4957-91cb-ce786350c869" rootViewController:self];
     bannerView.delegate = self;
     
     [self.banner addSubview:bannerView];
@@ -132,7 +153,7 @@
 
 #pragma  mark intersitial
 - (void) loadInteristial {
-    self.interstitalAd = [[WeMobInterstitialAd alloc] initWithAdUnitId:@"875f429e-19a3-49d3-ae90-79f55bf81ef8"];
+    self.interstitalAd = [[WeMobInterstitialAd alloc] initWithAdUnitId:@"ee0edf7d-4daa-4576-b633-d40bddcd8794"];
     self.interstitalAd.delegate = self;
     [self.interstitalAd loadAd];
 }
@@ -144,7 +165,7 @@
     }
 }
 
-#pragma mark <WECreativeInterstitialDelegate>
+#pragma mark <WeMobInterstitialAdDelegate>
 - (void)weMobInterstitialDidReceiveAd:(WeMobInterstitialAd *)interstitialAd {
     NSLog(@"WeMobInterstitialAd weMobInterstitialDidReceiveAd");
     self.showIntBtn.enabled = YES;
@@ -199,7 +220,7 @@
     btn.frame = CGRectMake(200, desc.frame.origin.y + 40, 100, 20);
     [rootView addSubview:btn];
     
-    self.nativeAd = [[WeMobNativeAd alloc] initWithAdUnitId:@"3f733527-5202-4869-b148-73962fadbb88"];
+    self.nativeAd = [[WeMobNativeAd alloc] initWithAdUnitId:@"46a98b93-fa84-44c2-b465-dd1a88d7cbc2"];
     self.nativeAd.delegate = self;
     
     WeMobNativeAdLayout *layout = [[WeMobNativeAdLayout alloc] init];
@@ -223,7 +244,7 @@
     }
 }
 
-#pragma mark <WeMobInnerNativeAdDelegate>
+#pragma mark <WeMobNativeAdDelegate>
 - (void)weMobNativeAdDidReceiveAd:(WeMobNativeAd *)nativeAd {
     NSLog(@"WeMobNativeAd weMobNativeAdDidReceiveAd");
     self.showNativeBtn.enabled = YES;
@@ -250,7 +271,7 @@
 }
 
 - (void)loadReward {
-    self.rewardAd = [[WeMobRewardedVideoAd alloc] initWithAdUnitId:@"f5f0cdb5-b18f-4e56-82f4-00d5238b31b0"];
+    self.rewardAd = [[WeMobRewardedVideoAd alloc] initWithAdUnitId:@"0fcda4e7-3134-4014-9631-e695b3db38b1"];
     self.rewardAd.delegate = self;
     [self.rewardAd loadAd];
 }
@@ -284,4 +305,75 @@
     NSLog(@"weMobRewardedVideo did reward");
 }
 
+#pragma mark WeMobFeedList
+- (void)loadFeedList {
+    _feedList = [[WeMobFeedList alloc] initWithAdUnitId:@"4fdf7041-28ff-4e96-9a94-136ba4d71f6b"];
+    [_feedList setCount:3];
+    _feedList.delegate = self;
+    [_feedList loadAd];
+}
+
+# pragma mark WeMobFeedListDelegate
+- (void)weMobFeedListDidReceiveAd:(WeMobFeedList *)feedList {
+    NSLog(@"weMobFeedListDidReceiveAd");
+    self.showFeedListBtn.enabled = YES;
+}
+
+/// 广告加载失败
+- (void)weMobFeedList:(WeMobFeedList *)feedList didFailToReceiveAdWithError:(WeMobAdError *)adError {
+    NSLog(@"weMobFeedList:didFailToReceiveAdWithError, errorCode is %d, errorMessage is %@",
+          (int)adError.getCode, adError.description);
+}
+
+/// 广告展示；如果一次加载多个广告，此回调会触发多次
+- (void)weMobFeedListWillPresentScreen:(WeMobFeedList *)feedList {
+    NSLog(@"weMobFeedListWillPresentScreen");
+}
+    
+/// 点击广告；如果一次加载多个广告，此回调会触发多次
+- (void)weMobFeedListWillLeaveApplication:(WeMobFeedList *)feedList {
+    NSLog(@"weMobFeedListWillLeaveApplication");
+}
+    
+/// 点击广告后关闭落地页
+- (void)weMobFeedListDidDismissScreen:(WeMobFeedList *)feedList {
+    NSLog(@"weMobFeedListDidDismissScreen");
+}
+
+- (void)showFeedList {
+    // 可以获得加载到的一组广告，广告数量可能小于设置的广告数量
+    NSMutableArray<WeMobFeed *> *feedArray = [_feedList getFeedArray];
+    
+    // 获取第一个广告并展示
+    WeMobFeed *feed = feedArray[0];
+    [self showFeed:feed];
+}
+    
+- (void)showFeed:(WeMobFeed *)feed {
+    // 布置展示广告素材的 UIViews，可以通过新建 xib 文件或自定义 UIView 的子类
+    NSArray *nibViewArray = [[NSBundle mainBundle] loadNibNamed:@"FeedAdView" owner:nil options:nil];
+    FeedAdView *feedAdView = nibViewArray.firstObject;
+    
+    // 创建广告布局 WeMobNativeAdLayout，设置布局元素和点击区域
+    WeMobNativeAdLayout *layout = [[WeMobNativeAdLayout alloc] init];
+    // 各种布局元素
+    layout.rootView = feedAdView;
+    layout.titleLabel = feedAdView.titleLabel;
+    layout.bodyLabel = feedAdView.bodyLabel;
+    layout.advertiserLabel = feedAdView.advertiserLabel;
+    layout.callToActionView = feedAdView.callToActionLabel;
+    layout.mediaView = feedAdView.mediaView;
+    layout.iconView = feedAdView.iconView;
+    layout.adChoicesView = feedAdView.adChoicesView;
+    // 设置点击区域
+    layout.interactiveArea = WeMobInteractiveArea.allArea;
+    
+    // 将广告素材填充到广告布局 
+    UIView *adView = [feed getAdView:layout];
+    
+    // 展示广告
+    adView.frame = CGRectMake(10, ScreenHeight-kBottomSafeHeight-70-350, ScreenWidth-20, 350);
+    [self.view addSubview:adView];
+}
+    
 @end

@@ -9,5 +9,6 @@ target 'wesdk_ios_demo' do
 
     use_frameworks!
     
-    pod 'WeMobSdk'
+    pod 'WeSdk'
+    pod 'WeSdkMediation_TikTok'
 end

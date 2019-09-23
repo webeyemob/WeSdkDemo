@@ -1,0 +1,6 @@
+framework module WeMobMediation_TikTok {
+  umbrella header "WeMobMediation_TikTok.h"
+
+  export *
+  module * { export * }
+}
