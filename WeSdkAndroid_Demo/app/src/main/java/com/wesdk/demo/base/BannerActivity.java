@@ -1,4 +1,4 @@
-package com.wesdk.demo;
+package com.wesdk.demo.base;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.FrameLayout;
 import com.we.sdk.core.api.ad.BannerAdView;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
+import com.wesdk.demo.R;
+import com.wesdk.demo.utils.ToastUtil;
 
 public class BannerActivity extends Activity {
 
@@ -53,11 +55,13 @@ public class BannerActivity extends Activity {
             @Override
             public void onAdLoaded() {
                 Log.d(TAG, "BannerAdView onAdLoaded");
+                ToastUtil.show(BannerActivity.this, "Banner Load Success");
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
                 Log.d(TAG, "BannerAdView onAdFailedToLoad: " + adError.toString());
+                ToastUtil.show(BannerActivity.this, "Banner Load Failed");
             }
 
             @Override

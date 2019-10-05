@@ -7,6 +7,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.we.sdk.core.api.WeSdk;
+import com.wesdk.demo.base.BannerActivity;
+import com.wesdk.demo.base.FeedListActivity;
+import com.wesdk.demo.base.InterstitialActivity;
+import com.wesdk.demo.base.NativeActivity;
+import com.wesdk.demo.base.RewardedVideoActivity;
+import com.wesdk.demo.base.SplashActivity;
+import com.wesdk.demo.mix.MixFullScreenActivity;
+import com.wesdk.demo.mix.MixViewActivity;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 

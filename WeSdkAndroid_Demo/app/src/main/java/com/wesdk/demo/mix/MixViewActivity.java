@@ -1,4 +1,4 @@
-package com.wesdk.demo;
+package com.wesdk.demo.mix;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import com.we.sdk.core.api.ad.MixViewAd;
 import com.we.sdk.core.api.ad.nativead.layout.NativeAdLayout;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
+import com.wesdk.demo.R;
+import com.wesdk.demo.base.SplashActivity;
+import com.wesdk.demo.utils.ToastUtil;
 
 public class MixViewActivity extends Activity {
 
@@ -68,11 +71,13 @@ public class MixViewActivity extends Activity {
             public void onAdLoaded() {
                 Log.d(TAG, "MixViewAd onAdLoaded");
                 mShowButton.setEnabled(true);
+                ToastUtil.show(MixViewActivity.this, "MixViewAd Load Success");
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
                 Log.d(TAG, "MixViewAd onAdFailedToLoad: " + adError.toString());
+                ToastUtil.show(MixViewActivity.this, "MixViewAd Load Failed");
             }
 
             @Override

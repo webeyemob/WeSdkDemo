@@ -1,4 +1,4 @@
-package com.wesdk.demo;
+package com.wesdk.demo.base;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import com.we.sdk.core.api.ad.feedlist.FeedList;
 import com.we.sdk.core.api.ad.nativead.layout.NativeAdLayout;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleFeedAdListener;
+import com.wesdk.demo.R;
+import com.wesdk.demo.utils.ToastUtil;
 
 import java.util.List;
 
@@ -79,11 +81,13 @@ public class FeedListActivity extends Activity {
             public void onAdLoaded() {
                 Log.d(TAG, "FeedList onAdLoaded");
                 mShowButton.setEnabled(true);
+                ToastUtil.show(FeedListActivity.this, "FeedList Load Success");
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
                 Log.d(TAG, "FeedList onAdFailedToLoad: " + adError.toString());
+                ToastUtil.show(FeedListActivity.this, "FeedList Load Failed");
             }
 
             @Override

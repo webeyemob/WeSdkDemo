@@ -1,4 +1,4 @@
-package com.wesdk.demo;
+package com.wesdk.demo.mix;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import com.we.sdk.core.api.ad.mixfull.MixFullScreenAd;
 import com.we.sdk.core.api.ad.nativead.layout.NativeAdLayout;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
+import com.wesdk.demo.R;
+import com.wesdk.demo.utils.ToastUtil;
 
 public class MixFullScreenActivity extends Activity {
 
@@ -50,7 +52,7 @@ public class MixFullScreenActivity extends Activity {
     private void initMixFullScreenAd() {
         mMixFullScreenAd = new MixFullScreenAd(this);
         // Set AdUnitId
-        mMixFullScreenAd.setAdUnitId("6a721d64-be26-4f62-9b38-1a63456ac2bc");
+        mMixFullScreenAd.setAdUnitId("f2096b04-031e-46bc-8f92-e1c40a3881fe");
         // Set NativeAdLayout To Render Ad
         mMixFullScreenAd.setNativeAdLayout(NativeAdLayout.getFullLayout1());
         // Set MixFullScreenAd Load Event
@@ -59,11 +61,13 @@ public class MixFullScreenActivity extends Activity {
             public void onAdLoaded() {
                 Log.d(TAG, "MixFullScreenAd onAdLoaded");
                 mShowButton.setEnabled(true);
+                ToastUtil.show(MixFullScreenActivity.this, "MixFullScreenAd Load Success");
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
                 Log.d(TAG, "MixFullScreenAd onAdFailedToLoad: " + adError.toString());
+                ToastUtil.show(MixFullScreenActivity.this, "MixFullScreenAd Load Failed");
             }
 
             @Override

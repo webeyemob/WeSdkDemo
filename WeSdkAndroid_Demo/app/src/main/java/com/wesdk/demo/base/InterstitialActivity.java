@@ -1,4 +1,4 @@
-package com.wesdk.demo;
+package com.wesdk.demo.base;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import com.we.sdk.core.api.ad.InterstitialAd;
 import com.we.sdk.core.api.ad.feedlist.Feed;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
+import com.wesdk.demo.R;
+import com.wesdk.demo.utils.ToastUtil;
 
 import java.util.List;
 
@@ -36,7 +38,7 @@ public class InterstitialActivity extends Activity {
             }
         });
 
-        mShowButton = findViewById(R.id.feedList_show);
+        mShowButton = findViewById(R.id.interstitial_show);
         mShowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,11 +65,13 @@ public class InterstitialActivity extends Activity {
             public void onAdLoaded() {
                 Log.d(TAG, "InterstitialAd onAdLoaded");
                 mShowButton.setEnabled(true);
+                ToastUtil.show(InterstitialActivity.this, "InterstitialAd Load Success");
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
                 Log.d(TAG, "InterstitialAd onAdFailedToLoad: " + adError.toString());
+                ToastUtil.show(InterstitialActivity.this, "InterstitialAd Load Failed");
             }
 
             @Override

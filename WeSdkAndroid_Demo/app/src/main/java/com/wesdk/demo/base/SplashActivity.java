@@ -1,4 +1,4 @@
-package com.wesdk.demo;
+package com.wesdk.demo.base;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.FrameLayout;
 import com.we.sdk.core.api.ad.SplashAd;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
+import com.wesdk.demo.R;
+import com.wesdk.demo.utils.ToastUtil;
 
 public class SplashActivity extends Activity {
 
@@ -52,11 +54,13 @@ public class SplashActivity extends Activity {
             public void onAdLoaded() {
                 Log.d(TAG, "SplashAd onAdLoaded");
                 mExitHandler.removeCallbacksAndMessages(null);
+                ToastUtil.show(SplashActivity.this, "SplashAd Load Success");
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
                 Log.d(TAG, "SplashAd onAdFailedToLoad: " + adError.toString());
+                ToastUtil.show(SplashActivity.this, "SplashAd Load Failed");
             }
 
             @Override

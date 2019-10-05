@@ -1,4 +1,4 @@
-package com.wesdk.demo;
+package com.wesdk.demo.base;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import com.we.sdk.core.api.ad.nativead.layout.NativeAdLayout;
 import com.we.sdk.core.api.ad.nativead.layout.SequenceNativeAdLayoutPolicy;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
+import com.wesdk.demo.R;
+import com.wesdk.demo.utils.ToastUtil;
 
 public class NativeActivity extends Activity {
 
@@ -72,11 +74,11 @@ public class NativeActivity extends Activity {
 
         // Or Set NativeAdLayout To Render Ad
         // mNativeAd.setNativeAdLayout(new SequenceNativeAdLayoutPolicy.Builder()
-                // .add(NativeAdLayout.getLargeLayout1())
-                // .add(NativeAdLayout.getLargeLayout2())
-                // .add(NativeAdLayout.getLargeLayout3())
-                // .add(NativeAdLayout.getLargeLayout4())
-                // .build());
+        // .add(NativeAdLayout.getLargeLayout1())
+        // .add(NativeAdLayout.getLargeLayout2())
+        // .add(NativeAdLayout.getLargeLayout3())
+        // .add(NativeAdLayout.getLargeLayout4())
+        // .build());
 
         // Set NativeAd Load Event
         mNativeAd.setAdListener(new SimpleAdListener() {
@@ -84,11 +86,13 @@ public class NativeActivity extends Activity {
             public void onAdLoaded() {
                 Log.d(TAG, "NativeAd onAdLoaded");
                 mShowButton.setEnabled(true);
+                ToastUtil.show(NativeActivity.this, "NativeAd Load Success");
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
                 Log.d(TAG, "NativeAd onAdFailedToLoad: " + adError.toString());
+                ToastUtil.show(NativeActivity.this, "NativeAd Load Failed");
             }
 
             @Override

@@ -1,4 +1,4 @@
-package com.wesdk.demo;
+package com.wesdk.demo.base;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.Button;
 import com.we.sdk.core.api.ad.RewardedVideoAd;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleRewardedVideoAdListener;
+import com.wesdk.demo.R;
+import com.wesdk.demo.utils.ToastUtil;
 
 public class RewardedVideoActivity extends Activity {
 
@@ -24,7 +26,7 @@ public class RewardedVideoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rewardedvideo);
 
-        mLoadButton = findViewById(R.id.interstitial_load);
+        mLoadButton = findViewById(R.id.rewardedvideo_load);
         mLoadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,7 +35,7 @@ public class RewardedVideoActivity extends Activity {
             }
         });
 
-        mShowButton = findViewById(R.id.feedList_show);
+        mShowButton = findViewById(R.id.rewardedvideo_show);
         mShowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,11 +63,13 @@ public class RewardedVideoActivity extends Activity {
             public void onAdLoaded() {
                 Log.d(TAG, "RewardedVideoAd onAdLoaded");
                 mShowButton.setEnabled(true);
+                ToastUtil.show(RewardedVideoActivity.this, "RewardedVideoAd Load Success");
             }
 
             @Override
             public void onAdFailedToLoad(AdError adError) {
                 Log.d(TAG, "RewardedVideoAd onAdFailedToLoad: " + adError.toString());
+                ToastUtil.show(RewardedVideoActivity.this, "RewardedVideoAd Load Failed");
             }
 
             @Override
