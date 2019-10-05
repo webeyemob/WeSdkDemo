@@ -1,105 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFEEEEEE">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/layout_root"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="12dp">
 
-        <LinearLayout
-            android:id="@+id/button_panel"
+        <Button
+            android:id="@+id/banner_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="BannerAdView" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/banner_load"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Banner Load" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/nativead_load"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="NativeAd Load" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/interstitial_load"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Interstitial Load" />
-
-                <Button
-                    android:id="@+id/interstitial_show"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:enabled="false"
-                    android:text="Interstitial Show" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/rewarded_load"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="RewardedVideo Load" />
-
-                <Button
-                    android:id="@+id/rewarded_show"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:enabled="false"
-                    android:text="RewardedVideo Show" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/banneradview_container"
+        <Button
+            android:id="@+id/interstitial_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="12dp"
-            android:gravity="center"
-            android:orientation="vertical" />
+            android:text="InterstitialAd" />
 
-        <LinearLayout
-            android:id="@+id/nativead_container"
+        <Button
+            android:id="@+id/rewardedvideo_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:background="@android:color/white"
-            android:orientation="vertical" />
+            android:text="RewardedVideoAd" />
+
+        <Button
+            android:id="@+id/native_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NativeAd" />
+
+        <Button
+            android:id="@+id/splash_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="SplashAd" />
+
+        <Button
+            android:id="@+id/feedlist_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="FeedList" />
+
+        <Button
+            android:id="@+id/mixview_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MixViewAd" />
+
+        <Button
+            android:id="@+id/mixfullscreen_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MixFullScreenAd" />
 
     </LinearLayout>
 </ScrollView>

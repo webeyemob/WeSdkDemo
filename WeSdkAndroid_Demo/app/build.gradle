@@ -14,12 +14,8 @@ android {
         versionCode 1
         versionName "1.0"
 
-
-
         multiDexEnabled true
     }
-
-
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -38,6 +34,8 @@ dependencies {
     // MultiDex
     implementation 'com.android.support:multidex:1.0.3'
 
-    // Access Sdk（must）
-    implementation 'com.we.sdk:access:1.6.5'
+    // WeSdk（must）
+    implementation 'com.we.sdk:core:1.8.5'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }
