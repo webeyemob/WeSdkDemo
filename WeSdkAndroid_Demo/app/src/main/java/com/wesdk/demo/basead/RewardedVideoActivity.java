@@ -1,6 +1,5 @@
 package com.wesdk.demo.basead;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +11,7 @@ import com.we.sdk.core.api.listener.SimpleRewardedVideoAdListener;
 import com.wesdk.demo.R;
 import com.wesdk.demo.utils.ToastUtil;
 
-public class RewardedVideoActivity extends Activity {
+public class RewardedVideoActivity extends BaseActivity {
 
     private final String TAG = "RewardedVideoActivity";
 
@@ -24,6 +23,8 @@ public class RewardedVideoActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getActionBar().setTitle("RewardedVideoAd");
+
         setContentView(R.layout.activity_rewardedvideo);
 
         mLoadButton = findViewById(R.id.rewardedvideo_load);

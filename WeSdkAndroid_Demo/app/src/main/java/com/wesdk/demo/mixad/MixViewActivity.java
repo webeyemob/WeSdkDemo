@@ -1,6 +1,5 @@
 package com.wesdk.demo.mixad;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,9 +11,10 @@ import com.we.sdk.core.api.ad.nativead.layout.NativeAdLayout;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
 import com.wesdk.demo.R;
+import com.wesdk.demo.basead.BaseActivity;
 import com.wesdk.demo.utils.ToastUtil;
 
-public class MixViewActivity extends Activity {
+public class MixViewActivity extends BaseActivity {
 
     private final String TAG = "MixViewActivity";
 
@@ -27,6 +27,8 @@ public class MixViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getActionBar().setTitle("MixViewAd");
+
         setContentView(R.layout.activity_mixview);
 
         mLoadButton = findViewById(R.id.mxiview_load);

@@ -1,6 +1,5 @@
 package com.wesdk.demo.basead;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,7 +12,7 @@ import com.we.sdk.core.api.listener.SimpleAdListener;
 import com.wesdk.demo.R;
 import com.wesdk.demo.utils.ToastUtil;
 
-public class BannerActivity extends Activity {
+public class BannerActivity extends BaseActivity {
 
     private final String TAG = "BannerActivity";
 
@@ -25,6 +24,8 @@ public class BannerActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getActionBar().setTitle("BannerAdView");
+
         setContentView(R.layout.activity_banner);
 
         mLoadButton = findViewById(R.id.banner_load);

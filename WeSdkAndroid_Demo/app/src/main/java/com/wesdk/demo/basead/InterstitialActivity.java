@@ -1,6 +1,5 @@
 package com.wesdk.demo.basead;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +11,7 @@ import com.we.sdk.core.api.listener.SimpleAdListener;
 import com.wesdk.demo.R;
 import com.wesdk.demo.utils.ToastUtil;
 
-public class InterstitialActivity extends Activity {
+public class InterstitialActivity extends BaseActivity {
 
     private final String TAG = "InterstitialActivity";
 
@@ -24,6 +23,8 @@ public class InterstitialActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getActionBar().setTitle("InterstitialAd");
+
         setContentView(R.layout.activity_interstitial);
 
         mLoadButton = findViewById(R.id.interstitial_load);

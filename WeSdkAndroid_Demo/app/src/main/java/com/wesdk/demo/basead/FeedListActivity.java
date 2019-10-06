@@ -1,6 +1,5 @@
 package com.wesdk.demo.basead;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -18,7 +17,7 @@ import com.wesdk.demo.utils.ToastUtil;
 
 import java.util.List;
 
-public class FeedListActivity extends Activity {
+public class FeedListActivity extends BaseActivity {
 
     private final String TAG = "FeedListActivity";
 
@@ -31,6 +30,8 @@ public class FeedListActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getActionBar().setTitle("FeedList");
+
         setContentView(R.layout.activity_feedlist);
 
         mLoadButton = findViewById(R.id.feedList_load);

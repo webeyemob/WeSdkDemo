@@ -1,6 +1,5 @@
 package com.wesdk.demo.basead;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,7 +13,7 @@ import com.we.sdk.core.api.listener.SimpleAdListener;
 import com.wesdk.demo.R;
 import com.wesdk.demo.utils.ToastUtil;
 
-public class NativeActivity extends Activity {
+public class NativeActivity extends BaseActivity {
 
     private final String TAG = "NativeActivity";
 
@@ -27,6 +26,8 @@ public class NativeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getActionBar().setTitle("NativeAd");
+
         setContentView(R.layout.activity_native);
 
         mLoadButton = findViewById(R.id.native_load);
