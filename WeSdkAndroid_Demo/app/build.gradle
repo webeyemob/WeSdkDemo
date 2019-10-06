@@ -6,8 +6,8 @@ android {
     defaultConfig {
         applicationId "com.wesdk.demo"
 
-        // minSdkVersion >= 15 if you mediation Fyber
-        // minSdkVersion >= 16 if you mediation MoPub
+        // minSdkVersion >= 15 For Fyber
+        // minSdkVersion >= 16 For MoPub
         minSdkVersion 16
 
         targetSdkVersion 28
@@ -38,7 +38,7 @@ dependencies {
     implementation 'com.we.sdk:core:1.8.5'
 
     // Tencent GDT
-    implementation "com.we.sdk:mediation_gdt:4.90.960.2"
+    implementation "com.we.sdk:mediation_gdt:4.90.960.3"
     // 4.80.950 之前的版本，不需要 gdtsdk_union 依赖
     implementation "com.we.sdk:gdtsdk_union:4.90.960"
     // 如果使用的 support-v4 和下面的版本不一样，请求确保 NotificationCompat.Builder 类包含 setProgress 方法
