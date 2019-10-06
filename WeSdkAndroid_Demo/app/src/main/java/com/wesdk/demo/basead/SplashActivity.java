@@ -54,7 +54,6 @@ public class SplashActivity extends Activity {
             public void onAdLoaded() {
                 Log.d(TAG, "SplashAd onAdLoaded");
                 mExitHandler.removeCallbacksAndMessages(null);
-                ToastUtil.show(SplashActivity.this, "SplashAd Load Success");
             }
 
             @Override
