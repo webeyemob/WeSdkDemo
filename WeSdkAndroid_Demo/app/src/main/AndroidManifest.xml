@@ -22,30 +22,32 @@
         </activity>
 
         <activity
-            android:name=".base.BannerActivity"
+            android:name=".basead.BannerActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".base.InterstitialActivity"
+            android:name=".basead.InterstitialActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".base.RewardedVideoActivity"
+            android:name=".basead.RewardedVideoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".base.NativeActivity"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name=".base.SplashActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".base.FeedListActivity"
+            android:name=".basead.NativeActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".mix.MixViewActivity"
+            android:name=".basead.SplashActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".basead.FeedListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mixad.MixViewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".mix.MixFullScreenActivity"
+            android:name=".mixad.MixFullScreenActivity"
             android:screenOrientation="portrait" />
 
         <uses-library

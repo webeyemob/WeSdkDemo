@@ -1,4 +1,4 @@
-package com.wesdk.demo.base;
+package com.wesdk.demo.basead;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,7 +9,6 @@ import android.widget.FrameLayout;
 
 import com.we.sdk.core.api.ad.nativead.NativeAd;
 import com.we.sdk.core.api.ad.nativead.layout.NativeAdLayout;
-import com.we.sdk.core.api.ad.nativead.layout.SequenceNativeAdLayoutPolicy;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
 import com.wesdk.demo.R;

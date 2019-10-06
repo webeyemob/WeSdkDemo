@@ -1,4 +1,4 @@
-package com.wesdk.demo.base;
+package com.wesdk.demo.basead;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,13 +7,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.we.sdk.core.api.ad.InterstitialAd;
-import com.we.sdk.core.api.ad.feedlist.Feed;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
 import com.wesdk.demo.R;
 import com.wesdk.demo.utils.ToastUtil;
-
-import java.util.List;
 
 public class InterstitialActivity extends Activity {
 

@@ -1,4 +1,4 @@
-package com.wesdk.demo.base;
+package com.wesdk.demo.basead;
 
 import android.app.Activity;
 import android.os.Bundle;

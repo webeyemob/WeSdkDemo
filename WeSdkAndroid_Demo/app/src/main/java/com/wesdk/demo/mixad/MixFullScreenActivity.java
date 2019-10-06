@@ -1,4 +1,4 @@
-package com.wesdk.demo.mix;
+package com.wesdk.demo.mixad;
 
 import android.app.Activity;
 import android.os.Bundle;

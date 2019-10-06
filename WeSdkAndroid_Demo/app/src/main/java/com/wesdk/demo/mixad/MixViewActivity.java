@@ -1,4 +1,4 @@
-package com.wesdk.demo.mix;
+package com.wesdk.demo.mixad;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,7 +12,6 @@ import com.we.sdk.core.api.ad.nativead.layout.NativeAdLayout;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
 import com.wesdk.demo.R;
-import com.wesdk.demo.base.SplashActivity;
 import com.wesdk.demo.utils.ToastUtil;
 
 public class MixViewActivity extends Activity {
