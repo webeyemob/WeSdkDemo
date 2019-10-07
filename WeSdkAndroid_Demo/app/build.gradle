@@ -35,7 +35,7 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
     // WeSdk（must）
-    implementation 'com.we.sdk:core:1.8.5'
+    implementation 'com.we.sdk:core:1.8.6'
 
     // Tencent GDT
     implementation "com.we.sdk:mediation_gdt:4.90.960.3"

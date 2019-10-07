@@ -7,7 +7,10 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.we.sdk.core.api.ad.nativead.NativeAd;
+import com.we.sdk.core.api.ad.nativead.layout.MultiStyleNativeAdLayout;
 import com.we.sdk.core.api.ad.nativead.layout.NativeAdLayout;
+import com.we.sdk.core.api.ad.nativead.layout.RandomNativeAdLayoutPolicy;
+import com.we.sdk.core.api.ad.nativead.layout.SequenceNativeAdLayoutPolicy;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
 import com.wesdk.demo.R;
@@ -70,15 +73,25 @@ public class NativeActivity extends BaseActivity {
                 .build());
 
         // Or Set NativeAdLayout Supported By WeSdk To Render Ad
-        // mNativeAd.setNativeAdLayout(NativeAdLayout.getLargeLayout1());
+//         mNativeAd.setNativeAdLayout(NativeAdLayout.getLargeLayout1());
 
-        // Or Set NativeAdLayout To Render Ad
-        // mNativeAd.setNativeAdLayout(new SequenceNativeAdLayoutPolicy.Builder()
-        // .add(NativeAdLayout.getLargeLayout1())
-        // .add(NativeAdLayout.getLargeLayout2())
-        // .add(NativeAdLayout.getLargeLayout3())
-        // .add(NativeAdLayout.getLargeLayout4())
-        // .build());
+        // Or Set NativeAdLayoutPolicy To Render Ad
+        // WeSdk Support SequenceNativeAdLayoutPolicy And RandomNativeAdLayoutPolicy
+        // You Can Implement Your NativeAdLayoutPolicy
+//        mNativeAd.setNativeAdLayout(SequenceNativeAdLayoutPolicy.Builder()
+//                .add(NativeAdLayout.getLargeLayout1())
+//                .add(NativeAdLayout.getLargeLayout2())
+//                .add(NativeAdLayout.getLargeLayout3())
+//                .add(NativeAdLayout.getLargeLayout4())
+//                .build());
+
+         // Or Set MultiStyleNativeAdLayout To Render Ad
+//        mNativeAd.setNativeAdLayout(MultiStyleNativeAdLayout.Builder()
+//                .setDefaultLayout(NativeAdLayout.getSmallLayout())
+//                .setLargeImageLayout(NativeAdLayout.getLargeLayout3())
+//                .setGroupImageLayout(NativeAdLayout.getLargeLayout2())
+//                .setVideoLayout(NativeAdLayout.getLargeLayout4())
+//                .build());
 
         // Set NativeAd Load Event
         mNativeAd.setAdListener(new SimpleAdListener() {

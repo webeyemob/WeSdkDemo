@@ -7,7 +7,9 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.we.sdk.core.api.ad.MixViewAd;
+import com.we.sdk.core.api.ad.nativead.layout.MultiStyleNativeAdLayout;
 import com.we.sdk.core.api.ad.nativead.layout.NativeAdLayout;
+import com.we.sdk.core.api.ad.nativead.layout.SequenceNativeAdLayoutPolicy;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleAdListener;
 import com.wesdk.demo.R;
@@ -64,8 +66,33 @@ public class MixViewActivity extends BaseActivity {
         mMixViewAd = new MixViewAd(this);
         // Set AdUnitId
         mMixViewAd.setAdUnitId("f7fcd8d4-ac3f-4bf0-9612-c9e33243ef74");
-        // Set NativeAdLayout To Render Ad
-        mMixViewAd.setNativeAdLayout(NativeAdLayout.getLargeLayout1());
+
+        // Set Custom NativeAdLayout To Render Ad
+        mMixViewAd.setNativeAdLayout(NativeAdLayout.Builder()
+                .setLayoutIdWithDefaultViewId(R.layout.native_custom_layout)
+                .build());
+
+        // Or Set NativeAdLayout Supported By WeSdk To Render Ad
+//        mMixViewAd.setNativeAdLayout(NativeAdLayout.getLargeLayout1());
+
+        // Or Set NativeAdLayoutPolicy To Render Ad
+        // WeSdk Support SequenceNativeAdLayoutPolicy And RandomNativeAdLayoutPolicy
+        // You Can Implement Your NativeAdLayoutPolicy
+//        mMixViewAd.setNativeAdLayout(SequenceNativeAdLayoutPolicy.Builder()
+//                .add(NativeAdLayout.getLargeLayout1())
+//                .add(NativeAdLayout.getLargeLayout2())
+//                .add(NativeAdLayout.getLargeLayout3())
+//                .add(NativeAdLayout.getLargeLayout4())
+//                .build());
+
+        // Or Set MultiStyleNativeAdLayout To Render Ad
+//        mMixViewAd.setNativeAdLayout(MultiStyleNativeAdLayout.Builder()
+//                .setDefaultLayout(NativeAdLayout.getSmallLayout())
+//                .setLargeImageLayout(NativeAdLayout.getLargeLayout3())
+//                .setGroupImageLayout(NativeAdLayout.getLargeLayout2())
+//                .setVideoLayout(NativeAdLayout.getLargeLayout4())
+//                .build());
+
         // Set MixView Load Event
         mMixViewAd.setAdListener(new SimpleAdListener() {
             @Override

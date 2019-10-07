@@ -9,7 +9,9 @@ import android.widget.LinearLayout;
 
 import com.we.sdk.core.api.ad.feedlist.Feed;
 import com.we.sdk.core.api.ad.feedlist.FeedList;
+import com.we.sdk.core.api.ad.nativead.layout.MultiStyleNativeAdLayout;
 import com.we.sdk.core.api.ad.nativead.layout.NativeAdLayout;
+import com.we.sdk.core.api.ad.nativead.layout.SequenceNativeAdLayoutPolicy;
 import com.we.sdk.core.api.listener.AdError;
 import com.we.sdk.core.api.listener.SimpleFeedAdListener;
 import com.wesdk.demo.R;
@@ -74,8 +76,33 @@ public class FeedListActivity extends BaseActivity {
         mFeedList.setAdUnitId("06840669-d600-4a68-afeb-0015e6c7695a");
         // Set Ad Count You Want To Load
         mFeedList.setCount(3);
-        // Set NativeAdLayout To Render Ad
-        mFeedList.setDefaultAdLayout(NativeAdLayout.getLargeLayout1());
+
+        // Set Custom NativeAdLayout To Render Ad
+        mFeedList.setNativeAdLayout(NativeAdLayout.Builder()
+                .setLayoutIdWithDefaultViewId(R.layout.native_custom_layout)
+                .build());
+
+        // Or Set NativeAdLayout Supported By WeSdk To Render Ad
+//        mFeedList.setNativeAdLayout(NativeAdLayout.getLargeLayout1());
+
+        // Or Set NativeAdLayoutPolicy To Render Ad
+        // WeSdk Support SequenceNativeAdLayoutPolicy And RandomNativeAdLayoutPolicy
+        // You Can Implement Your NativeAdLayoutPolicy
+//        mFeedList.setNativeAdLayout(SequenceNativeAdLayoutPolicy.Builder()
+//                .add(NativeAdLayout.getLargeLayout1())
+//                .add(NativeAdLayout.getLargeLayout2())
+//                .add(NativeAdLayout.getLargeLayout3())
+//                .add(NativeAdLayout.getLargeLayout4())
+//                .build());
+
+        // Or Set MultiStyleNativeAdLayout To Render Ad
+//        mFeedList.setNativeAdLayout(MultiStyleNativeAdLayout.Builder()
+//                .setDefaultLayout(NativeAdLayout.getMediumLayout())
+//                .setLargeImageLayout(NativeAdLayout.getLargeLayout4())
+//                .setGroupImageLayout(NativeAdLayout.getLargeLayout1())
+//                .setVideoLayout(NativeAdLayout.getLargeLayout3())
+//                .build());
+
         // Set FeedList Load Event
         mFeedList.setAdListener(new SimpleFeedAdListener() {
             @Override

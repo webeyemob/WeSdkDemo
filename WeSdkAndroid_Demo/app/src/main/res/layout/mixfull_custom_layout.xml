@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EEE9E7">
+
+    <FrameLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp">
+
+        <!-- MediaView Layout -->
+        <LinearLayout
+            android:id="@id/wesdk_native_mediaview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="vertical" />
+
+        <!-- AdChoices Layout -->
+        <FrameLayout
+            android:id="@id/wesdk_native_adchoices_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end" />
+
+        <!-- 广告主名称 -->
+        <TextView
+            android:id="@id/wesdk_native_advertiser_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:paddingStart="6dp"
+            android:paddingLeft="6dp"
+            android:paddingEnd="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="6dp"
+            android:textColor="#000000" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_button"
+        android:layout_below="@id/layout_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="24dp">
+
+            <!-- 图标 -->
+            <FrameLayout
+                android:id="@id/wesdk_native_icon_layout"
+                android:layout_width="72dp"
+                android:layout_height="72dp" />
+
+            <!-- 标题 -->
+            <TextView
+                android:id="@id/wesdk_native_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="8dp"
+                android:textColor="#FF212121"
+                android:textSize="36dp" />
+
+            <!-- 副标题 -->
+            <TextView
+                android:id="@id/wesdk_native_subtitle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="#FF757575"
+                android:textSize="18dp" />
+
+            <!-- 描述 -->
+            <TextView
+                android:id="@id/wesdk_native_body_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="8dp"
+                android:textColor="#FF757575"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- 应用评分 -->
+                <RatingBar
+                    android:id="@id/wesdk_native_ratingbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:minWidth="10dp"
+                    android:minHeight="10dp"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/wesdk_ratingbar_progress" />
+
+                <!-- 应用评分 -->
+                <TextView
+                    android:id="@id/wesdk_native_rating_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="0dp"
+                    android:paddingRight="0dp"
+                    android:textColor="#FF9E9E9E"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 应用来源 -->
+                <TextView
+                    android:id="@id/wesdk_native_store_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginRight="6dp"
+                    android:textColor="#FF9E9E9E"
+                    android:textSize="14dp" />
+
+                <!-- 应用价格 -->
+                <TextView
+                    android:id="@id/wesdk_native_price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF9E9E9E"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <!-- 按钮 -->
+        <Button
+            android:id="@id/wesdk_native_calltoaction_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/wesdk_native_button_bg"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+</RelativeLayout>
